@@ -1,0 +1,29 @@
+name: bump-lastupdated
+
+# При каждом пуше profile.json ставит LastUpdated = текущее время (Unix).
+# Клиенты (Happ, Incy) считают профиль обновлённым только если LastUpdated больше прежнего.
+# Пуш от GITHUB_TOKEN не запускает workflow повторно, так что цикла нет.
+
+on:
+  push:
+    branches: [main]
+    paths: [profile.json]
+
+permissions:
+  contents: write
+
+jobs:
+  bump:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Bump LastUpdated
+        run: |
+          jq empty profile.json
+          jq --arg t "$(date +%s)" '.LastUpdated = $t' profile.json > profile.tmp
+          mv profile.tmp profile.json
+          git config user.name "routing-bot"
+          git config user.email "routing-bot@users.noreply.github.com"
+          git add profile.json
+          git commit -m "bump LastUpdated" || exit 0
+          git push
