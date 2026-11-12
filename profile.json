@@ -16,6 +16,11 @@
     "lknpd.nalog.ru": "213.24.64.181"
   },
   "DirectSites": [
+    "domain:diongo.ru",
+"domain:dion.vc",
+"domain:zoom.us",
+"domain:zoom.com",
+"domain:zoomapp.cloud",
     "geosite:category-ru",
     "domain:vkusvill.ru",
     "domain:vk.com",
