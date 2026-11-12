@@ -10,17 +10,17 @@
   "DomesticDNSIP": "77.88.8.8",
   "Geoipurl": "https://cdn.jsdelivr.net/gh/hydraponique/roscomvpn-geoip/release/geoip.dat",
   "Geositeurl": "https://cdn.jsdelivr.net/gh/hydraponique/roscomvpn-geosite/release/geosite.dat",
-  "LastUpdated": "1794498240",
+  "LastUpdated": "1794498961",
   "DnsHosts": {
     "lkfl2.nalog.ru": "213.24.64.175",
     "lknpd.nalog.ru": "213.24.64.181"
   },
   "DirectSites": [
     "domain:diongo.ru",
-"domain:dion.vc",
-"domain:zoom.us",
-"domain:zoom.com",
-"domain:zoomapp.cloud",
+    "domain:dion.vc",
+    "domain:zoom.us",
+    "domain:zoom.com",
+    "domain:zoomapp.cloud",
     "geosite:category-ru",
     "domain:vkusvill.ru",
     "domain:vk.com",
